@@ -10,7 +10,7 @@ function login() {
     if (username === "admin" && password === "password") {
       // Giriş başarılı mesajını göster
       alert("Giriş başarılı!");
-      window.location.href = "voice.html"
+      window.location.href = "main.html"
     } else {
       // Kullanıcı adı veya şifre yanlış ise hata mesajı göster
       alert("Kullanıcı adı veya şifre yanlış!");
