@@ -137,7 +137,7 @@ body {
     top: 80%;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 768px) {
     .wrapper {
         width: 600px;
         height: 300px;
