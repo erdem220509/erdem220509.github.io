@@ -1,211 +1,124 @@
-body {
-    background-image: linear-gradient(320deg, #f7a4a4, #90ec6c);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.wrapper {
-    text-align: center;
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(90deg, #27272a 50%, #727289 50%);
+}
+
+.container {
+    background-image: linear-gradient(90deg, #727289 50%, #27272a 50%);
+    width: 400px;
+    height: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.login {
+    border-radius: 1em;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.34);
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 40px;
-    border: 1px solid #fd0303;
-    background-color: rgb(187, 255, 0);
-    border-radius: 10px;
-    box-shadow: 4px 10px 20px;
-    transition: 0.3s ease;
+    align-items: center;
+    font-weight: 500;
 }
 
-
-.label1 {
-    display: none;
-}
-
-.label2 {
-    display: none;
-}
-
-.input1 {
-    display: none;
-    background-color: #caf7d4; 
-    width: 250px;
-    height: 30px;
-    border-radius: 10px;
-}
-
-.input1 input{
-    background: none;
-    outline: none;
-    border: none;
-    width: 90%;
-    height: 30px;
-    font-size: 17px;
-    color: #000;
-    font-weight: bold;
-    transition: 1s ease;
-}
-
-.input2 {
-    display: none;
-    background-color: #caf7d4; 
-    width: 250px;
-    height: 30px;
-    border-radius: 10px;
-}
-
-.input2 input {
-    background: none;
-    outline: none;
-    border: none;
-    width: 90%;
-    height: 30px;
-    font-size: 17px;
-    color: black;
-    transition: 1s ease;
-}
-
-
-.button {
-    display: none;
-    background-image: linear-gradient(#c8f5e6, #feffa6);
-    width: 200px;
-    height: 40px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 22px;
-}
-
-.button button{
-    margin: 6px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 22px;
-    transition: all 1s ease-in-out;
-    font-weight: bold;
-}
-
-.button:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.login:hover {
-    width: 600px;
-    height: 500px;
-    background-image: linear-gradient(360deg, #b1c4ff, #ffcdfc);
+.firstLine, .secondLine {
     display: flex;
-    align-items: start;
-    font-size: 22px;
-    border: 1px solid #000;
+    line-height: 30px;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
-.login:hover .label1 {
-    display: block;
+#password {
+    margin-left: 5.5px;
+}
+
+.container input {
+    outline: none;
+    width: 200px;
+    height: 35px;
+    border: 2px solid #000;
+    font-weight: bold;
+    color: #000;
+}
+
+.firstLine {
+    margin-bottom: 30px;
+}
+
+h1 {
     position: absolute;
-    top: 20%;
+    bottom: 77%;
 }
 
-.login:hover .input1 {
-    display: block;
+.container button {
     position: absolute;
-    top: 30%;
 }
 
-.login:hover .label2 {
-    display: block;
+input {
+    background-image: linear-gradient(90deg, #27272a 20%, #727289 80%);
+    color: #fff;
+}
+
+#username, #password {
+    color: #fff;
+}
+
+p {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.h1 {
+    background-color: #27272a;
     position: absolute;
-    top: 45%;
+    left: 143px;
+    color: #fff;
 }
 
-.login:hover .input2 {
-    display: block;
+.h2 {
+    background-color: #727289;
     position: absolute;
-    top: 55%;
+    left: 201px;
 }
 
-.login:hover .button {
-    display: block;
-    position: absolute;
-    top: 80%;
+button {
+    width: 130px;
+    height: 40px;
+    margin-left: 96px;
+    color: #fff;
+    background-image: linear-gradient(90deg, #27272a 50%, #727289 0%);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 1em;
 }
 
-@media screen and (max-width: 768px) {
+button:hover {
+    transform: scale(1.1);
+}
 
-    html {
-        height: 100%;
-        width: 100%;
-    }
+button:active {
+    transform: scale(1);
+}
 
-    .wrapper {
+@media (max-width: 500px) {
+    .container {
+        transform: scale(0.8);
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 400px;
-        height: 300px;
     }
-
-    .login {
-        font-weight: bold;
-        font-size: 25px;
-        display: flex;
-        align-items: start;
-        height: 500px;
-        width: 600px;
-        background-image: linear-gradient(360deg, #b1c4ff, #ffcdfc);
-    }
-
-    .input1 {
-        display: flex;
-        position: absolute;
-        top: 52%;
-    }
-
-    .label1 {
-        display: inline;
-        margin-bottom: 100px;
-        font-weight: bold;
-        font-size: 22px;
-        position: absolute;
-        top: 40%;
-    }
-
-    .input2 {
-        position: absolute;
-        display: flex;
-        top: 80%;
-    }
-
-    .label2 {
-        display: flex;
-        position: absolute;
-        top: 68%;
-        font-size: 22px;
-    }
-
-    .button {
-        display: flex;
-        position: absolute;
-        top: 120%;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.5s ease-in-out;
-        cursor: pointer;
-    }
-
-    .button button {
-        font-weight: bold;
-        font-size: 20px;
-        cursor: pointer;
-    }
-
 }

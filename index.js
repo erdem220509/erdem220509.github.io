@@ -1,10 +1,8 @@
-
-
 // Butona tıklanınca çalışacak fonksiyonu tanımla
 function login() {
     // Kullanıcı adı ve şifre inputlarının değerlerini al
-    var username = document.querySelector(".input1 input").value;
-    var password = document.querySelector(".input2 input").value;
+    var username = document.querySelector("#username").value;
+    var password = document.querySelector("#password").value;
   
     // Kullanıcı adı ve şifrenin doğruluğunu kontrol et
     if (username === "admin" && password === "password") {
@@ -18,5 +16,5 @@ function login() {
   }
   
   // Butona tıklanınca login fonksiyonunu çalıştır
-  document.querySelector(".button button").addEventListener("click", login);
+  document.querySelector("#button").addEventListener("click", login);
   
